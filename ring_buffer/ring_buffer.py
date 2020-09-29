@@ -24,7 +24,7 @@ class RingBuffer:
             # delete item in storage, and add item
             if self.oldest < self.capacity - 1:
                 self.oldest += 1
-            # If oldest item is going to be greater than capacity,
+            # If new item is going to be greater than capacity,
             # do not add item.
             else:
                 self.oldest = 0

@@ -20,15 +20,19 @@ duplicates = []  # Return the list of duplicates in this data structure
 #         if name_1 == name_2:
 #             duplicates.append(name_1)
 
-bst = BSTNode("")
-for name in names_1:
-    # print(name)
-    bst.insert(name)
-for double in names_2:
-    if bst.contains(double):
-        duplicates.append(double)
-    else:
-        pass
+# bst = BSTNode("")
+# for name in names_1:
+#     # print(name)
+#     bst.insert(name)
+# for double in names_2:
+#     if bst.contains(double):
+#         duplicates.append(double)
+#     else:
+#         pass
+
+set_1 = set(names_1)
+set_2 = set(names_2)
+duplicates = set_1.intersection(set_2)
 
 
 end_time = time.time()
